@@ -1,0 +1,313 @@
+:root {
+  --primary-color: #fe5858;
+  --secondary-color: #ee9617;
+  --light-color: #fbffff;
+  --primary-gradient: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  --transition: all 0.3s ease-in-out;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --border: 1px solid rgba(46, 46, 46, 0.1);
+}
+
+/* General styles */
+* {
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+.border {
+  border: var(--border);
+}
+
+.shadow {
+  box-shadow: var(--box-shadow);
+}
+
+*::selection {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+body {
+  font-family: "Questrial", sans-serif;
+  background-color: var(--light-color);
+}
+
+html {
+  scroll-padding-top: -2rem;
+}
+
+section {
+  padding: 0 9%;
+  padding-top: 5rem;
+}
+
+.btn:not(.btn-circle) {
+  text-transform: capitalize;
+  color: var(--light-color);
+  transition: var(--transition);
+}
+
+.btn-primary-outlined {
+  border: 1px solid #fff;
+}
+
+.btn.plans {
+  color: var(--primary-color);
+}
+
+.explore.btn {
+  color: var(--secondary-color);
+}
+
+h1 {
+  text-transform: capitalize;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: var(--transition);
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+.font-questrial {
+  font-family: "Questrial", sans-serif;
+}
+
+.border-dotted {
+  border: 2px dotted rgba(0, 0, 0, 0.204);
+}
+
+/* -------------------------------CUSTOM STYLES----------------------------------------- */
+
+/* -----------------------------------Header------------------------------------ */
+header a {
+  color: rgb(1, 134, 192);
+  font-weight: 500;
+}
+
+header .logo {
+  color: #fff;
+}
+
+header.navbar .navbar-menu a.nav-link:hover,
+header.navbar .navbar-menu a.nav-link.active {
+  color: #1a1a1a !important;
+}
+
+/* -----------------------------------Hero------------------------------------ */
+.hero {
+  background: url("../images/hero-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: -1rem;
+  color: #fff !important;
+}
+
+.navbar.navbar-slideIn.animate-slideIn .logo {
+  color: var(--primary-color);
+}
+
+/* -----------------------------------Services---------------------------------- */
+section.services,
+section.why-cloud {
+  background: url("../images/services-bg.png");
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: right 4rem;
+}
+
+img.signature {
+  transform: scale(0.5);
+}
+
+.grid-wrapper {
+  grid-template-columns: 12rem auto;
+}
+
+.call-container {
+  border-left: 20px solid var(--secondary-color);
+}
+
+.call {
+  background: var(--primary-gradient);
+}
+
+.swiper-slide-next {
+  transform: scale(1.3);
+  transition: var(--transition);
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1024px) {
+  .navbar ul.navbar-menu li.nav-item a.nav-link {
+    padding: 0.3rem 0.5rem !important;
+  }
+
+  .hero {
+    padding-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 0 3%;
+  }
+
+  .navbar .navbar-toggle button:hover {
+    background-color: #ee4a4a !important;
+  }
+
+  .navbar .navbar-toggle-icon .fa {
+    color: #fff !important;
+  }
+
+  .navbar .btn-primary-gradient {
+    background: #fff !important;
+    color: rgb(30, 30, 35);
+  }
+
+  .navbar .navbar-menu {
+    background-color: #f48181 !important;
+  }
+
+  .navbar ul.navbar-menu li.nav-item a.nav-link {
+    color: #fff;
+  }
+
+  .navbar.navbar-slideIn.animate-slideIn .navbar-menu li a.nav-link {
+    color: rgb(1, 134, 192) !important;
+  }
+
+  .navbar.navbar-slideIn.animate-slideIn .navbar-toggle-icon .fa {
+    color: inherit !important;
+  }
+
+  .navbar.navbar-slideIn.animate-slideIn .btn-primary-gradient {
+    background: var(--primary-gradient) !important;
+    color: #fff;
+  }
+
+  .navbar.navbar-slideIn.animate-slideIn .navbar-toggle-icon:hover {
+    background-color: rgb(218, 229, 232) !important;
+  }
+
+  .navbar.navbar-slideIn.animate-slideIn .navbar-menu {
+    background-color: #fff !important;
+  }
+
+  .hero {
+    background: url("../images/hero-bg.png");
+    background-position: -2rem;
+    padding-top: 5rem;
+    padding-left: 0;
+    padding-right: 5rem;
+  }
+
+  .hero .hero-image {
+    width: 100%;
+  }
+
+  .hero h1.title {
+    font-size: 2.5rem;
+  }
+
+  .grid-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-wrapper .grid-box1,
+  .grid-wrapper .grid-box2 {
+    grid-column: 1/2;
+  }
+
+  .grid-wrapper .grid-box2 img {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .logos img {
+    margin-left: 0;
+  }
+
+  .swiper-slide-next {
+    transform: scale(1);
+    transition: var(--transition);
+  }
+}
+
+.box-1,
+.box-2 {
+  background-color: rgb(223, 223, 223);
+}
+
+.box-3 {
+  background: var(--primary-gradient);
+}
+.box-4 {
+  background-color: rgb(205, 219, 232);
+}
+
+.newsletter {
+  background: var(--primary-gradient);
+}
+
+.subscribe-btn {
+  color: var(--primary-color) !important;
+}
+
+.form-control {
+  border-radius: 1rem;
+  background: transparent;
+  border: 1px solid #fff !important;
+  color: #fff;
+}
+
+.form-control::placeholder {
+  color: #e1e1e1;
+}
+
+@media screen and (max-width: 640px) {
+  .logos img {
+    margin-left: 0;
+    width: 180px;
+  }
+
+  section.hero,
+  section.why-cloud,
+  section.newsletter {
+    text-align: center;
+  }
+
+  .hero .buttons {
+    flex-direction: column;
+  }
+
+  .navbar .navbar-toggle button:hover {
+    background-color: transparent !important;
+  }
+}
+
+footer {
+  background-color: #1a1a1a;
+}
+
+@media screen and (max-width: 480px) {
+  .logos img {
+    margin-left: 0;
+    width: 130px;
+  }
+}
